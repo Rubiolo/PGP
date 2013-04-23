@@ -1,0 +1,10 @@
+genStat :: [[Int]] -> [(Int,Int,Int)]
+
+
+genStat list = [(minimum n ,maximum n, lengthi n) | n <- list) ]
+
+
+
+lengthi :: [Int] -> Int
+lengthi [] = 0
+lengthi (x:xs) = 1 + lengthi xs
