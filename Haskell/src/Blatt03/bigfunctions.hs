@@ -4,7 +4,9 @@ import Data.List
 f1 xs = map (+1) xs
 
 -- [ x+y | x <- xs, y <-ys ]
-f2 xs ys = map (+(map (+0) ys)) xs
+f2 :: [Int] -> [Int] -> [Int]
+f2 (x:[]) ys = map (+x) ys
+f2 (x:xs) ys = map (+x) ys ++ f2 xs ys 
 
 -- [ x+2 | x <- xs, x > 3 ]
 f3 xs = map (+2) (filter (>3) xs)
