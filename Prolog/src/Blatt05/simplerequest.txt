@@ -1,0 +1,25 @@
+Stellen Sie eine kleine Wissensbasis von Tieren und Jäger-Beute-Paaren nach dem Muster tier(katze) und jagt(katze, maus) zusammen. Stellen Sie dann die folgenden Anfragen:
+
+- Welche Tiere jagen Mäuse?
+jagt(katze, maus)
+jagt(maeusebussard, maus)
+
+- Welche Tiere jagen Katzen?
+jagt(hund, katze)
+jagt(fuechse, katze)
+
+- Welches Tier ist sowohl Jäger als auch Beutetier?
+jaegerundbeutetier(robben)
+jaegerundbeutetier(
+
+- Welches Tier ist Beutetier?
+beutetier(froschlurch)
+beutetier(koaler)
+
+- Welches Tier ist nur Jäger?
+jaeger(loewe)
+jaeger(schlange)
+
+- Wer jagt wen?
+jagt(orcas, robben)
+jagt(robben, fische)
