@@ -1,0 +1,46 @@
+studiert(anton, if)
+studiert(hagen, cv)
+studiert(gunther, cv)
+studiert(adele, if)
+studiert(uta, cv)
+studiert(anna, if)
+
+student(anton)
+student(hagen)
+student(gunther)
+
+studentin(adele)
+studentin(uta)
+studentin(anna)
+
+a)
+teams(Person, if)
+teams(Person, cv)
+
+Teams werden gebildet:
+studiert(anton, if)
+studiert(adele, if)
+studiert(anna, if)
+
+studiert(uta, cv)
+studiert(hagen, cv)
+studiert(gunther, cv)
+
+b)
+teams(Student, Studentin)
+
+Gefundende Paare:
+(anton, adele)
+(anton, uta)
+(anton, anna)
+
+(hagen, adele)
+(hagen, uta)
+(hagen, anna)
+
+(gunther, adele)
+(gunther, uta)
+(gunther, anna)
+
+c)
+teams(...
