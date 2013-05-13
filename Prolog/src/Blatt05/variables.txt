@@ -1,0 +1,18 @@
+Gegeben sind verschiedene Paare von Listen. Können die Variablen in den Paaren unifiziert werden? Wenn ja, welchen Wert erhalten die Variablen?
+
+  - [X,Y,Z]   und   [john,likes,fish]
+
+
+  - [cat]     und   [X|Y]
+
+
+  - [X,Y|Z]   und   [mary,likes,wine]
+
+
+  - [[the,Y]|Z]  und  [[X,answer],[is,here]]
+
+
+  - [X,Y,X]   und    [a,Z,Z]
+
+
+  - [[X],[Y],[X]] und [[a],[Z],[Z]]	

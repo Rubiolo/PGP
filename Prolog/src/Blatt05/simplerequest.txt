@@ -10,7 +10,7 @@ jagt(fuechse, katze)
 
 - Welches Tier ist sowohl Jäger als auch Beutetier?
 jaegerundbeutetier(robben)
-jaegerundbeutetier(
+jaegerundbeutetier(fisch)
 
 - Welches Tier ist Beutetier?
 beutetier(froschlurch)
