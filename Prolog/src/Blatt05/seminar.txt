@@ -30,17 +30,42 @@ b)
 teams(Student, Studentin)
 
 Gefundende Paare:
-(anton, adele)
-(anton, uta)
-(anton, anna)
+teams(anton, adele)
+teams(anton, uta)
+teams(anton, anna)
 
-(hagen, adele)
-(hagen, uta)
-(hagen, anna)
+teams(hagen, adele)
+teams(hagen, uta)
+teams(hagen, anna)
 
-(gunther, adele)
-(gunther, uta)
-(gunther, anna)
+teams(gunther, adele)
+teams(gunther, uta)
+teams(gunther, anna)
 
 c)
-teams(...
+teams(Person,if),teams(Person2, cv)
+
+teams(anton,hagen)
+teams(anton,gunther)
+teams(anton,uta)
+
+teams(hagen, anton)
+teams(hagen, adele)
+teams(hagen, anna)
+
+teams(gunther, anton)
+teams(gunther, adele)
+teams(gunther, anna)
+
+teams(adele, hagen)
+teams(adele,gunther)
+teams(adele, uta)
+
+teams(uta,anton)
+teams(uta,adele)
+teams(uta,anna)
+
+teams(anna,hagen)
+teams(anna,gunther)
+teams(anna,uta)
+
