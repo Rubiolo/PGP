@@ -25,3 +25,12 @@ verheiratet(wilhelmine,fritz).
 verheiratet(brunhilde,heinz).
 verheiratet(elfriede,anton).
 verheiratet(theresia,wilhelm).
+
+verheiratet(Vater,Mutter) :- vater(Father,Kind),mutter(Mother,Kind).
+
+opa(Opa,Engel) :- 	vater(Vater,Enkel),
+			vater(Opa,Vater);
+			mutter(Mutter,Enkel),
+			vater(Opa,Mutter).
+
+oma(Oma,Engel) :- verheiratet(Opa,Oma),opa(Opa,Engel).
