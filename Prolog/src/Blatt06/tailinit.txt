@@ -1,29 +1,29 @@
 Gezeigt werden soll: tail (init xs) = init (tail xs)
 
-Definitionen von haskell.org
-tail (_ : xs) = xs (tail.1)
+# Definitionen von haskell.org
+# tail (_ : xs) = xs 				*t1
+#
+# init [x] = [] 				*i1
+# init (x:xs) = x : init xs			*i2
+#
 
-init [x] = [] (init.1)
-init (x:xs) = x : init xs (init.2)
-
-Induktionsanfang: 
+#Induktionsanfang: 
 tail(init (x:y:[])) 	= tail(x: init [y])
-			= tail(x:[]) 	*i2
-			= []		*t1
-init(tail (x:y:[])) 	= init(y:[])	*t1
-			= []		*i1
+			= tail(x:[]) 		*i2
+			= []			*t1
+init(tail (x:y:[])) 	= init(y:[])		*t1
+			= []			*i1
 
-Induktionsvoraussetzung:
+#Induktionsvoraussetzung:
 tail (init xs) = init (tail xs)) xs hat mindestens zwei Elemente
 
-Induktionsbehauptung:
+#Induktionsbehauptung:
 tail (init (x:xs)) = init (tail (x:xs))
 
-Induktionsschritt:
-
-tail (init (x:xs) 	= tail (x: init(xs)) (i2)
-			= init xs (t1)
-init (tail (x:xs)) 	= init xs (t1)
+#Induktionsschritt:
+tail (init (x:xs) 	= tail (x: init(xs))	*i2
+			= init xs 		*t1
+init (tail (x:xs)) 	= init xs		*t1
 
 gleich dem was zu zeigen war. -> bewiesen.
 
@@ -31,9 +31,8 @@ gleich dem was zu zeigen war. -> bewiesen.
 
 
 
-
-Es kann auf die Bedingung "mindestens 2 Elemente" nicht verzichtet werden, da es sonst zu undefinierten Fällen kommt. Sowohl tail als auch init
-entfernen ein Element aus einer Liste. Also werden bei tail(init xs) und init(tail xs) jeweils zwei Elemente entfernt. Damit die Funktion also
-funktioniert, werden in der Liste xs mindestens zwei Elemente benötigt, die entfernt werden können.
+#Warum nicht verzichtet werden kann:
+- beide Funktionen entfernen jeweils ein Element aus der Liste
+- wenn beide Funktionen "gleichzeitig" angewendet werden, dann muessen auch mindestens 2 Elemente vorhanden sein, damit der Beweis korrekt durchgefuehrt werden kann
 
 
