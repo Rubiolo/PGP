@@ -19,3 +19,7 @@ p2 :- a, !, b.
 p2 :- c.
 
 % testvalues:
+% vergleich zu Haskell: Klauseln werden von oben nach unten abgearbeitet. Wenn oben schon eine Schranke ist,
+% und mehr Bedingungen hat, als die folgenden Klauseln, dann fuehrt der Ausdruck zu "Fehlern".
+% Zusammengefasst: erst "leichte" Terme aufschreiben, und dann "kompliziertere", um solche "Fehler zu vermeinden."
+% p1 verwendet die erste und zweite Klausel, wohingegen p2 durch "!" nur eine benutzt und den Rest ausschliesst.
