@@ -1,6 +1,9 @@
+% if = Informatk, cv =  Computervisualistic
+
 studiert(anton, if).
 studiert(hagen, cv).
 studiert(gunther, cv).
+
 studiert(adele, if).
 studiert(uta, cv).
 studiert(anna, if).
