@@ -1,4 +1,4 @@
-Stellen Sie eine kleine Wissensbasis von Tieren und Jaeger-Beute-Paaren nach dem Muster tier(katze) und jagt(katze, maus) zusammen. Stellen Sie dann die folgenden Anfragen:
+% Stellen Sie eine kleine Wissensbasis von Tieren und Jaeger-Beute-Paaren nach dem Muster tier(katze) und jagt(katze, maus) zusammen. Stellen Sie dann die folgenden Anfragen:
 
 tier(katze).
 tier(maus).
