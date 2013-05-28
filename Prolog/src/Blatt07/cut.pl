@@ -23,9 +23,14 @@ obst(birne).
 
 % 3.) obst(X),!,obst(Y).
 % result:
-X = Y, Y = apfel ;
-X = apfel, Y = pfirsich.
+% X = Y, Y = apfel ;
+% X = apfel, Y = pfirsich.
 % Hier werden weitere Alternativen nach dem obst(apfel). nicht mehr beachtet, da nur Paare gefunden werden,
 % welche als "X = apfel" haben. Spriche: nur das erste zutreffendes Element wird behandelt.
 
 % b) Definieren Sie das Praedikat class(N,C)
+
+pos(X) :- X > 0.
+neg(X) :- X < 0.
+zero(X) :- X == 0.
+
