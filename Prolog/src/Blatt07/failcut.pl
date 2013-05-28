@@ -1,9 +1,13 @@
 % a) Why is function wrong?
+% max(X, Y, X) :- X >= Y, !.
+% max(X, Y, Y).
+
+% change in:
 max(X, Y, X) :- X >= Y, !.
-max(X, Y, Y).
+max(X, Y, Y) :- Y > X.
 
 % Why is max(3,1,1) not right?
-%
+% Es wird nur abgefangen, wenn das erste Glied Maximum ist.
 
 
 
