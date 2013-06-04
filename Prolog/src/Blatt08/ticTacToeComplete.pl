@@ -1,16 +1,10 @@
 /*
-
 Prolog code developped for use in the lecture
-
 'Programmierparadigmen (PGP)'
 Sommer 2007
-
 program taken from M.L.Scott: 'Programming Language Pragmatics', 2000
-
 Ch. 11.3 
-
-adapted to SWI prolog; All rights reserved, copyright 2006, 2007 D. Rösner 
-
+adapted to SWI prolog; All rights reserved, copyright 2006, 2007 D. R�r 
 */
 
 :- dynamic o/1.
@@ -132,7 +126,3 @@ clear :- o(A), retract(o(A)), fail.
 %%% main goal that drives everything:
 
 play :- not(clear), repeat, getmove, makemove, printboard, done.
-
-
-
-
