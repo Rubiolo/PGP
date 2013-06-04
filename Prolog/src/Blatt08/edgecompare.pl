@@ -1,5 +1,5 @@
 % a.)
-edgeCompare(Delta, [_,_,G1], [_,_,G2]) :- compare(Delta, G1,G2).
+edgeCompare(Delta, [_,_,E1], [_,_,E2]) :- compare(Delta, E1,E2).
 
 % testdata
 % ?- compare(Delta, 3, 4).
