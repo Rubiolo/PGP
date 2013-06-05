@@ -5,7 +5,7 @@ mySubstOne(E, S, [H|L], [H|NList]) :- H \= E, mySubstOne(E,S,L,NList).
 
 % helpfunction
 same([],[]).
-same([H|L], [H|N]) :- areEqual(L,N).
+same([H|L], [H|N]) :- same(L,N).
 
 % b)
 mySubstAll(_,_,[],[]).
