@@ -91,11 +91,10 @@ build(A) :- x(B), line(A,B,C), empty(C).
 %%% when is game definitely over?
 all_full :- full(1),full(2),full(3),full(4),full(5),full(6),full(7),full(8),full(9).
 
-%%% options for earlier success
+%%% options for earlier success (HAVE TO CHANGE LINES HERE!!!!)
+done :- ordered_line(A,B,C), o(A), o(B), o(C), write('You won.'),nl.
 
 done :- ordered_line(A,B,C), x(A), x(B), x(C), write('I won.'),nl.
-
-done :- ordered_line(A,B,C), o(A), o(B), o(C), write('You won.'),nl.
 
 done :- all_full, write('Draw.'), nl.
 
