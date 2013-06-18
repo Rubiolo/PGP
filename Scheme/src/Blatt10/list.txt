@@ -38,8 +38,3 @@ define (wrappa word n)
   (cond
    [(= n 0) word]
    [else (list (wrappa word (- n 1)))]))
-       
-
-
-
-
