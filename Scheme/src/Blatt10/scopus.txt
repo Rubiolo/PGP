@@ -1,0 +1,16 @@
+a)
+(define m 4)   
+	(define (p m)   
+		(pp 3))    
+			(define (pp x)       
+				(+ x m))
+  
+result: (p 10) = 7
+      
+b)              
+(define n 4)
+	(define (q n)
+	(define (qq x)
+		(+ x n))    
+		(qq 3))
+result: (q 10) = 13
