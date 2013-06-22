@@ -6,7 +6,7 @@
 	(eq? x #t)))
 	
 (define (mean list)
-	(if (null? x) 
+	(if (null? list) 
 	'()
 	(rec list 0 0)))
 
