@@ -3,8 +3,7 @@
 	(cutable? value (add (trans '() value (expt  10 (count value 0))) 0))
 )
 
-
-
+; transform a value in a list
 (define (trans list value n)
 	(if (eqv? n 1)
 		(cons value list)
@@ -20,7 +19,7 @@
 	)
 )
 
-; division without rest
+; control clear division without rest
 (define (cutable? x y)
 	(eqv? (modulo x y) 0)
 )
@@ -33,6 +32,23 @@
 	)
 )
 
+;;;;;;;;;;;;;;;;;;;;;;NEXT;;;;;;;;;;;;;;;;;;;;
 
-(define (getharshad x y)
+; main function of getharshad
+(define (getharshad min max)
+	(if (eqv? min max)
+		(harshad? min)
+		(getharshadRec min max min '())
+	)
+)
+
+; recursive helpfunction for getharshad
+(define (getharshadRec min max cur list)
+	(if (eqv? cur (+ max 1))
+		list
+		(if (harshad? cur)
+			(getharshadRec min max (+ cur 1) (cons cur list))
+			(getharshadRec min max (+ cur 1) list)
+		)
+	)
 )
