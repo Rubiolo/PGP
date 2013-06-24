@@ -1,0 +1,76 @@
+; main function of harshad
+(define (harshad? value)
+(cutable? value (add (trans '() value (expt  10 (count value 0))) 0))
+)
+
+
+
+(define (trans list value n)
+(if (eqv? n 1)
+(cons value list)
+(trans (cons (quotient value n) list) (modulo value n) (quotient n 10))
+)
+)
+
+; add all calues in a list [first call]: (add list 0)
+(define (add list sum)
+(if (null? list)
+sum
+(add (cdr list) (+ sum (car list)))
+))
+
+
+
+; division without rest
+(define (cutable? x y)
+(eqv? (modulo x y) 0)
+)
+
+
+
+; function count the decimal place [first call]: (count value 0)
+(define (count value counter) 
+(if (eqv? value 0)
+(- counter 1)
+(count (quotient value 10) (+ counter 1))
+))
+
+
+(add (trans '() 1234 (expt  10 (count 1234 0))) 0)
+(add (trans '() 1234 (expt  3) 0)
+(add (trans '() 1234 1000) 0)
+
+
+
+(trans '() 1234 (count ( 1234))
+
+(trans '() 1234 1000)
+
+(add (trans '() 1234 1000))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+; function create value
+((define (create value counter)
+(if (eqv? counter 0)
+value
+(create (* value 10) (- counter 1))
+)))
+
+;(e10 counter)
+
+(define (getharshad x y))
+
+
+(trans '() 777 n)
