@@ -2,7 +2,7 @@
 ;;; (Harold Abelson and Gerald Jay Sussman with Julie Sussman)
 
 ;;; Added by Bjoern Hoefling (for usage with MIT-Scheme)
-;;; modifier by Ulrich Rott
+;;; modified by Ulrich Rott
 
 (define (atom? x)
   (or (number? x)
