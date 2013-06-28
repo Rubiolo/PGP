@@ -25,7 +25,11 @@
            (make-product (multiplier exp)
                          (deriv (multiplicand exp) var))
            (make-product (deriv (multiplier exp) var)
-                         (multiplicand exp))))))
+                         (multiplicand exp))))
+        ((power? exp)
+         (make-product (exponent exp)
+          (make-power (base exp)
+          (make-sum (exponent exp) -1))))))
 
 (define (constant? x) (number? x))
 
