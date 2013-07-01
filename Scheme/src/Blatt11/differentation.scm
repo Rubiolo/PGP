@@ -25,7 +25,8 @@
            (make-product (multiplier exp)
                          (deriv (multiplicand exp) var))
            (make-product (deriv (multiplier exp) var)
-                         (multiplicand exp))))                
+                         (multiplicand exp))))
+		; BEGIN MODDING by Student           
          ((power? exp)
          (make-product
            (exponent exp)
@@ -33,6 +34,7 @@
           (make-sum (exponent exp) -1)
                          )))
 	)
+		; END MODDING by Student
 )
 ; BEGIN MODDING by Student
         ((power? exp)
