@@ -10,31 +10,37 @@
 ; '((b . 1) (b . 2) (b . 4))
 
 ; b)
-(define ((check4Members elements) liste)
-	(if (null? elements)
+(define ((check4Members elems) liste)
+	(if (null? elems)
 		'()
-		(help ((list '()) elements liste))
+		(help '() elems liste)
 	)
 )
 
 ; helpfuntion
 (define (help result rest liste)
 	(if (null? rest)
-	result
-	(help (cons result (cons (car rest)(map ((curry equal?) (car rest)) liste))) (cdr rest) liste)
+		result
+		(help (append result (list(list((curry intern?) (car rest) liste)))) (cdr rest) liste)
 	)
 )
 
-(map ((curry +) 10) '(1 2 3))
+(define (intern? x liste)
+	(if (null? liste)
+		#f
+		(if (equal? x (car liste))
+			#t
+			(intern? x (cdr liste))
+		)
+	)	
+)
 
+; trash
+((check4Members '(1)) '(1 2 3))
+(map ((curry +) 10) '(1 2 3))
 (help (
 ((consElem2All 'b) '((1) (2 3) (4)))
 consElem2All 'b
-
 ((check4Members '()) '(1 2 3 4))
-
-
-
 (map ((curry equal?) (car rest)) '((1 2 1 1 3 1 1))
-
 ((consElem2All ) )
