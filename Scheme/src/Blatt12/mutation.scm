@@ -2,7 +2,7 @@
 
 (define b '(3))
 
-
+(set-car! (cdr 'b) 'a)
 ; b)
 (define x '(a c))
 
