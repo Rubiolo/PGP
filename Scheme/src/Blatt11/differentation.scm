@@ -36,12 +36,6 @@
 	)
 		; END MODDING by Student
 )
-; BEGIN MODDING by Student
-        ((power? exp)
-         (make-product (exponent exp)
-          (make-power (base exp)
-          (make-sum (exponent exp) -1))))))
-; END MODDING by Student
 
 (define (constant? x) (number? x))
 
