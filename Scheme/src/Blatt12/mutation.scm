@@ -23,8 +23,5 @@
 
 ; x '(a b c)
 (set-cdr! y (cdr x))
-(set! x (car x))
+(set! x (list(car x)))
 (set-cdr! x y)
-
-
-(append (list('3)) a))
