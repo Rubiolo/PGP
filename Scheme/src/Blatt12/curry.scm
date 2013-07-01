@@ -21,10 +21,11 @@
 (define (help result rest liste)
 	(if (null? rest)
 		result
-		(help (append result (list(list((curry intern?) (car rest) liste)))) (cdr rest) liste)
+		(help (append result (list(cons ((curry intern?) (car rest) liste) (list(car rest))))) (cdr rest) liste)
 	)
 )
 
+; checked is a value in a list
 (define (intern? x liste)
 	(if (null? liste)
 		#f
@@ -35,12 +36,9 @@
 	)	
 )
 
-; trash
-((check4Members '(1)) '(1 2 3))
-(map ((curry +) 10) '(1 2 3))
-(help (
-((consElem2All 'b) '((1) (2 3) (4)))
-consElem2All 'b
-((check4Members '()) '(1 2 3 4))
-(map ((curry equal?) (car rest)) '((1 2 1 1 3 1 1))
-((consElem2All ) )
+; RESULTS :
+; > ((check4Members '(1 2 9)) '(1 2 3 4))
+; '((#t 1) (#t 2) (#f 9))
+
+; > ((check4Members '(1 2 9 5 0)) '(1 2 3 4 6 8 0))
+; '((#t 1) (#t 2) (#f 9) (#f 5) (#t 0))
