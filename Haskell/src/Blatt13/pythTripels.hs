@@ -8,8 +8,22 @@ pyTriples = [(x,y,z)|z <- [5 ..], x <-[3 .. z-2], y <-[x+1 .. z-1], x*x + y*y ==
 
 sieve :: [(Int,Int,Int)] -> [(Int, Int, Int)]
 sieve [] = []
-sieve (x:xs) = x: (sieve (filter (\y -> (multOf y x)) xs))
+sieve (x:xs) = x: (sieve (filter (\y -> not(multOf x y)) xs))
 
+-- main function
 dub :: [(Int, Int, Int)]
 dub = sieve pyTriples
---sieve pyTriples
+
+
+-- c) bigger then 1000
+filters :: [(Int, Int, Int)] -> [(Int, Int, Int)]
+filters [] = []
+filters (x:xs) = x : (filters (filter (\(a,b,c) -> (bigger [(a,b,c)])) xs))
+
+bigger :: [(Int, Int, Int)] -> Bool
+bigger [(a,b,c)] = (a > 1000) && (b > 1000) && (c > 1000)
+
+-- main function
+duc :: [(Int, Int, Int)]
+duc = filters (sieve pyTriples)
+
