@@ -18,10 +18,10 @@ dub = sieve pyTriples
 -- c) bigger then 1000
 filters :: [(Int, Int, Int)] -> [(Int, Int, Int)]
 filters [] = []
-filters (x:xs) = x : (filters (filter (\(a,b,c) -> (bigger [(a,b,c)])) xs))
+filters (x:xs) = x : (filters (filter (\(a,b,c) -> (bigger (a,b,c))) xs))
 
-bigger :: [(Int, Int, Int)] -> Bool
-bigger [(a,b,c)] = (a > 1000) && (b > 1000) && (c > 1000)
+bigger :: (Int, Int, Int) -> Bool
+bigger (a,b,c) = (a > 1000) && (b > 1000) && (c > 1000)
 
 -- main function
 duc :: [(Int, Int, Int)]
